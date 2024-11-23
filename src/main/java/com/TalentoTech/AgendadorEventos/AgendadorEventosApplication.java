@@ -8,9 +8,7 @@ public class AgendadorEventosApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AgendadorEventosApplication.class, args);
-		//First Comment
-
-
+		System.out.printf("Project OK");
 	}
 
 }
