@@ -25,14 +25,14 @@ public class DepartamentoController {
 
     @GetMapping("/{id}")
     public  ResponseEntity<Departamento> buscarDepartamento(@PathVariable int id){
-        Optional<Departamento> duenio = departamentoService.buscarById(id);
-        return duenio.map(ResponseEntity::ok).orElseGet(()->ResponseEntity.notFound().build());
+        Optional<Departamento> departamento = departamentoService.buscarById(id);
+        return departamento.map(ResponseEntity::ok).orElseGet(()->ResponseEntity.notFound().build());
     }
 
     @GetMapping
     public  ResponseEntity<List<Departamento>> obtenerTodos(){
-        List<Departamento> duenio = departamentoService.consultarTodos();
-        return  new ResponseEntity<>(duenio, HttpStatus.OK);
+        List<Departamento> departamento = departamentoService.consultarTodos();
+        return  new ResponseEntity<>(departamento, HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
