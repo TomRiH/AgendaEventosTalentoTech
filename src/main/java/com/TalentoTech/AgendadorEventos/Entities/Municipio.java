@@ -8,28 +8,28 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @Entity
-@Table(name = "departamento")
+@Table(name = "municipio")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Departamento {
+public class Municipio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, length = 50)
     private String codigo;
 
     @Column(nullable = false, length = 50)
     private String nombre;
 
-    @OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ManyToOne(targetEntity = Departamento.class)
+    @JoinColumn(name = "id_departamento", referencedColumnName = "codigo", nullable = false)
     @JsonIgnore
-    private List<Municipio> municipios;
+    private Departamento departamento;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fecha_creacion;
