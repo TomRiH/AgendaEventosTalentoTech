@@ -34,7 +34,7 @@ public class DepartamentoService {
             departamento.setNombre(editarDepartamento.getNombre());
             departamento.setCodigo(editarDepartamento.getCodigo());
             return departamentoRepository.save(departamento);
-        }).orElseThrow(() -> new RuntimeException("Departamento no encrontado"));
+        }).orElseThrow(() -> new RuntimeException("Departamento no encontrado"));
     }
 
     // Borrar por id
