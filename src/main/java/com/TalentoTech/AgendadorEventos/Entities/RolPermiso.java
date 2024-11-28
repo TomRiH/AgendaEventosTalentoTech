@@ -22,13 +22,13 @@ public class RolPermiso {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Rol", referencedColumnName = "id", nullable = false)
     @JsonIgnore
-    private Rol rol;
+    private Rol id_rol;
 
     @Id
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Permiso", referencedColumnName = "id", nullable = false)
     @JsonIgnore
-    private Permiso permiso;
+    private Permiso id_permiso;
 
 
 }
