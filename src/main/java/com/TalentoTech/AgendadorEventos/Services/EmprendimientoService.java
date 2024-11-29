@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public class EmprendimientoService {
     //Inyeccion del Repositorio - Llama a la interfaz
+    @Autowired
     private EmprendimientoRepository emprendimientoRepository;
 
     //Insertar
