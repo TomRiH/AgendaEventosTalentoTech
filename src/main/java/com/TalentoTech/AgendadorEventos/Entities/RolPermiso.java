@@ -18,17 +18,14 @@ public class RolPermiso {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Id
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Rol", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "id_rol", referencedColumnName = "id", nullable = false)
     @JsonIgnore
-    private Rol rol;
+    private Rol id_rol;
 
-    @Id
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Permiso", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "id_permiso", referencedColumnName = "id", nullable = false)
     @JsonIgnore
-    private Permiso permiso;
-
+    private Permiso id_permiso;
 
 }

@@ -10,17 +10,30 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "rol")
+@Table(name = "evento")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Rol {
+public class Evento {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 255)
     private String nombre;
+
+    @Column(nullable = false)
+    private LocalDateTime fecha;
+
+    @Column(nullable = false)
+    private Integer id_municipio;
+
+    @Column(nullable = false, length = 255)
+    private String direccion;
+
+    @Column(nullable = false)
+    private String descripcion;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fecha_creacion;
