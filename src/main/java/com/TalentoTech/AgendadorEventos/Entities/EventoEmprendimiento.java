@@ -23,10 +23,9 @@ public class EventoEmprendimiento {
     @JsonIgnore
     private Evento evento;
 
-    /*
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_emprendimiento", referencedColumnName = "id", nullable = false)
     @JsonIgnore
     private Emprendimiento Emprendimiento;
-     */
+
 }
