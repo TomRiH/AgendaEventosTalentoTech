@@ -27,7 +27,7 @@ public class Municipio {
     private String nombre;
 
     @ManyToOne(targetEntity = Departamento.class)
-    @JoinColumn(name = "id_departamento", referencedColumnName = "codigo", nullable = false)
+    @JoinColumn(name = "id_departamento", referencedColumnName = "id", nullable = false)
     @JsonIgnore
     private Departamento departamento;
 
