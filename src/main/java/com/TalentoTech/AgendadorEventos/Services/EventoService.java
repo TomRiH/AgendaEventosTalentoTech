@@ -35,13 +35,14 @@ public class EventoService {
         return eventoRepository.findById(id).map(evento -> {
             evento.setNombre(editarEvento.getNombre());
             evento.setFecha(editarEvento.getFecha());
+            evento.setId_municipio(editarEvento.getId_municipio());
+            evento.setDireccion(editarEvento.getDireccion());
+            evento.setDescripcion(editarEvento.getDescripcion());
             return eventoRepository.save(evento);
         }).orElseThrow(() -> new RuntimeException("Evento no encontrado"));
     }
 
     //Borrar por id
     public void borrarEvento(Integer id) {eventoRepository.deleteById(id);}
-
-
 
 }
