@@ -29,6 +29,11 @@ public class RolController {
         return  rol.map(ResponseEntity::ok).orElseGet(()->ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/permisos/{id}")
+    public List<Object> buscarPermisosByRol(@PathVariable Integer id) {
+        return rolService.buscarPermisosByRol(id);
+    }
+
     @GetMapping
     public  ResponseEntity<List<Rol>> obtenerTodos(){
         List<Rol> rol = rolService.consultarTodos();
