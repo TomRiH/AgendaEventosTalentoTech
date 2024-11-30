@@ -20,12 +20,12 @@ public class RolPermiso {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_rol", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     private Rol id_rol;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_permiso", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     private Permiso id_permiso;
 
 }

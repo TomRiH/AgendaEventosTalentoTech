@@ -1,10 +1,13 @@
 package com.TalentoTech.AgendadorEventos.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.util.Set;
 
 @Data
 @Entity
@@ -22,5 +25,9 @@ public class Permiso {
 
     @Column(length = 255)
     private String descripcion;
+
+    @ManyToMany(mappedBy = "permisos")
+    @JsonIgnore
+    private Set<Rol> roles;
 
 }
