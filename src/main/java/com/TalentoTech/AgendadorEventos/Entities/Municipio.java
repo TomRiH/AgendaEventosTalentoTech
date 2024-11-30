@@ -28,7 +28,7 @@ public class Municipio {
 
     @ManyToOne(targetEntity = Departamento.class)
     @JoinColumn(name = "id_departamento", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
+    @JsonIgnore // comentar si se desea agregar la informacion del departamento por municipio
     private Departamento departamento;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)

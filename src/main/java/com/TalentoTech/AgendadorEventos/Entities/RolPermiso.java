@@ -27,5 +27,5 @@ public class RolPermiso {
     @JoinColumn(name = "id_permiso", referencedColumnName = "id", nullable = false)
     @JsonIgnore
     private Permiso permiso;
-
+  
 }

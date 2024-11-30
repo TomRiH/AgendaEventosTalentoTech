@@ -1,6 +1,5 @@
 package com.TalentoTech.AgendadorEventos.Services;
 
-import com.TalentoTech.AgendadorEventos.Entities.Departamento;
 import com.TalentoTech.AgendadorEventos.Entities.Municipio;
 import com.TalentoTech.AgendadorEventos.Repositories.MunicipioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,11 @@ public class MunicipioService {
         return municipioRepository.save(municipio);
     }
 
+    //consultar Todos
+    public List<Municipio> consultarTodos(){
+        return  municipioRepository.findAll();
+    }
+
     public Optional<Municipio> buscarById(Integer id) {
         return municipioRepository.findById(id);
     }
@@ -32,7 +36,7 @@ public class MunicipioService {
             municipio.setCodigo(editarMunicipio.getCodigo());
             municipio.setDepartamento(editarMunicipio.getDepartamento());
             return municipioRepository.save(municipio);
-        }).orElseThrow(() -> new RuntimeException("Municipio no encrontado"));
+        }).orElseThrow(() -> new RuntimeException("Municipio no encontrado"));
     }
 
     public void borrarMunicipio(Integer id) {

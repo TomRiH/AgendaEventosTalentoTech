@@ -24,6 +24,11 @@ public class RolService {
         return rolRepository.findById(id);
     }
 
+    //Consultar permisos por rol
+    public List<Object> buscarPermisosByRol(Integer rolId) {
+        return rolRepository.findPermisosByRolId(rolId);
+    }
+
     //consultar Todos
     public List<Rol> consultarTodos(){
         return  rolRepository.findAll();
