@@ -11,25 +11,31 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "municipio")
+@Table(name = "emprendimiento")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Municipio {
+public class Emprendimiento {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
+    @Column
     private String codigo;
 
-    @Column(nullable = false, length = 50)
+    @Column
     private String nombre;
 
-    @ManyToOne(targetEntity = Departamento.class)
-    @JoinColumn(name = "id_departamento", referencedColumnName = "id", nullable = false)
-    @JsonIgnore // comentar si se desea agregar la informacion del departamento por municipio
-    private Departamento departamento;
+    @ManyToOne(targetEntity = Municipio.class)
+    @JoinColumn(name = "id_municipio", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
+    private Municipio municipio;
+
+    @ManyToOne(targetEntity = Categoria.class)
+    @JoinColumn(name = "id_categoria", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
+    private Categoria categoria;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fecha_creacion;

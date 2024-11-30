@@ -7,27 +7,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.util.List;
-
 @Data
 @Entity
-@Table(name = "categoria")
+@Table(name="evento_emprendimiento")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Categoria {
+public class EventoEmprendimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
-    private String nombre;
-
-    @Column(length = 255)
-    private String descripcion;
-
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_evento", referencedColumnName = "id", nullable = false)
     @JsonIgnore
-    private List<Emprendimiento> emprendimientos;
+    private Evento evento;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_emprendimiento", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
+    private Emprendimiento Emprendimiento;
 
 }
