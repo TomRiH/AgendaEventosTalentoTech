@@ -15,7 +15,7 @@ import java.util.List;
 @Table(name = "departamento")
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(exclude = "municipios")
 public class Departamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
