@@ -1,4 +1,4 @@
-package com.TalentoTech.AgendadorEventos.config;
+package com.TalentoTech.AgendadorEventos.Config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
