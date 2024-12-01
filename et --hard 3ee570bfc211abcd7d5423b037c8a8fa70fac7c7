@@ -1,0 +1,281 @@
+[33mcommit 55251cf9b28924ace30ee85601df5671d4913c48[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/emprendimiento-laboratorio[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 3ee570b 274e58c
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Sat Nov 30 19:12:41 2024 -0500
+
+    Merge pull request #15 from TomRiH/feature/CorsconfigEmprendimiento
+    
+    Add packages  Dto config exception funtion edit create emprendimiento
+
+[33mcommit 274e58c32680de3d2048bfbdcc03db7d394d7d6d[m
+Author: Jefferson <jeffer230@gmail.com>
+Date:   Sat Nov 30 19:08:52 2024 -0500
+
+    Add packages  Dto config exception funtion edit create emprendimiento
+
+[33mcommit 3ee570bfc211abcd7d5423b037c8a8fa70fac7c7[m
+Merge: d44144f bfb9360
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Sat Nov 30 15:18:25 2024 -0500
+
+    Merge pull request #14 from TomRiH/feature/emprendimiento_evento
+    
+    Feature/emprendimiento evento
+
+[33mcommit bfb936045f6bd34c05229828f7826651e1bdb3cf[m
+Merge: 5f1f0fc d44144f
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Sat Nov 30 15:18:18 2024 -0500
+
+    Merge branch 'master' into feature/emprendimiento_evento
+
+[33mcommit d44144f15111077990c44f8e74437a803b8f1910[m
+Merge: 8e633c1 e70c368
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Sat Nov 30 15:16:34 2024 -0500
+
+    Merge pull request #13 from TomRiH/features/relationsclass
+    
+    Features/relationsclass
+
+[33mcommit e70c36859f6d681d51384ee4a2a65452a6df2cf8[m
+Author: Jefferson <jeffer230@gmail.com>
+Date:   Sat Nov 30 03:19:40 2024 -0500
+
+    config cors
+
+[33mcommit 177570ec5947b2f3828ce3c3df8b7ea8be2f17cc[m[33m ([m[1;31morigin/features/relationsclass[m[33m)[m
+Author: Jefferson <jeffer230@gmail.com>
+Date:   Fri Nov 29 00:33:12 2024 -0500
+
+    relations class departamento municipio- rol permiso
+
+[33mcommit 5f1f0fce3c45650103cf78201098c9db98858e65[m[33m ([m[1;31morigin/feature/emprendimiento_evento[m[33m)[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 22:57:09 2024 -0500
+
+    Actualizacion de EmprendimientoService
+
+[33mcommit cb576456d31027403d714f00f4c867ed8221c11f[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 22:45:40 2024 -0500
+
+    EventoEmprendimiento actualizado para incluir relacion ManyToOne con Emprendimiento
+
+[33mcommit 64ebdc3e4527be7662750d144b0ac86d951e4ade[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 22:41:29 2024 -0500
+
+    Cracion de Clase EmprendimientoController
+
+[33mcommit 195c2d3b2aa81e7709b957da820606d9d24bb31c[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 22:29:25 2024 -0500
+
+    Cracion de Clase EmprendimientoService
+
+[33mcommit 0f06357a582141170c976e048835cf9b047d8cb8[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 21:54:22 2024 -0500
+
+    Creacion de EventoEmprendimiento y Emprendimiento. Se agregó tambien la relacion entre Emprendimiento y Categoria. Por ultimo se arreglo la relacion que tenia Municipio con Departamento
+
+[33mcommit ee061bc958add044ea0e6ad03fe4c42188c70ed2[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 20:43:27 2024 -0500
+
+    Arreglo de la tabla Municipio foreign key a "id".
+
+[33mcommit 404f595c16be66a1251784a3a141d6a1240c0204[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 3a85273 8e633c1
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Thu Nov 28 19:59:53 2024 -0500
+
+    Merge pull request #12 from TomRiH/master
+    
+    Master
+
+[33mcommit 8e633c1f90251907a91d82a7112adfa40f6f04e8[m
+Merge: 97804cc b7bf753
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Thu Nov 28 19:59:17 2024 -0500
+
+    Merge pull request #11 from TomRiH/feature/Evento
+    
+    Feature/evento
+
+[33mcommit b7bf753112d8c0cb2fd91425035295752a0b7cb4[m[33m ([m[1;31morigin/feature/Evento[m[33m)[m
+Merge: a3f3e96 97804cc
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Thu Nov 28 19:59:10 2024 -0500
+
+    Merge branch 'master' into feature/Evento
+
+[33mcommit 97804ccec40679dad15dec149fac8571bd209115[m
+Merge: 97a0863 85ae6a0
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Thu Nov 28 19:53:53 2024 -0500
+
+    Merge pull request #10 from TomRiH/features/testEvento
+    
+    test class evento
+
+[33mcommit 85ae6a04394399a296485d20525ea393da46e0c4[m[33m ([m[1;31morigin/features/testEvento[m[33m)[m
+Author: Jefferson <jeffer230@gmail.com>
+Date:   Thu Nov 28 19:53:07 2024 -0500
+
+    test class evento
+
+[33mcommit a3f3e96e49863c44232cf3ab807aa237e249acc8[m
+Merge: d9e9531 f9bc013
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 19:35:17 2024 -0500
+
+    Merge remote-tracking branch 'origin/feature/Evento' into feature/Evento
+
+[33mcommit d9e9531bf25e0c690cce55dd90864c09d49f18db[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 18:58:09 2024 -0500
+
+    Arreglo de clase RolPermiso. Esta creaba dos columnas adicionales. la columna rol y permiso. Deben iniciar con id_rol & id_permiso para funcionar
+
+[33mcommit f9bc013315471c3e8201afa2b92f23b98f528fc4[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 28 18:58:09 2024 -0500
+
+    Arreglo de clase RolPermiso. Esta creaba dos columnas adicionales. la columna rol y permiso. Deben iniciar con id_rol & id_permiso para funcionar
+
+[33mcommit 97a0863b797c9acf1850657c566c91000a5e9594[m
+Merge: df20c10 d0f8291
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Thu Nov 28 17:53:19 2024 -0500
+
+    Merge pull request #9 from TomRiH/feature/Evento
+    
+    Feature/evento
+
+[33mcommit d0f8291f0e710fa25e381360a97dd761d9884f9f[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Wed Nov 27 18:32:52 2024 -0500
+
+    Creacion de archivos SQL para la creacion e insertacion de datos SQL para probar la base de datos. Se encuentra en "src\main\resources\SQL"
+
+[33mcommit bdbfb08800082bbe21a535413fae5473547f9e62[m
+Author: Tomas <tomas.riosh@hotmail.com>
+Date:   Wed Nov 27 17:24:55 2024 -0500
+
+    Finalizacion de Creacion de clase Eventos
+
+[33mcommit 3a85273d1edd89809177cbc58f03111376fa717e[m
+Merge: feea759 df20c10
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Wed Nov 27 14:47:08 2024 -0500
+
+    Merge pull request #8 from TomRiH/master
+    
+    Master
+
+[33mcommit df20c1094b49d8b4562f3462f34dc4391cc5d1fb[m
+Merge: ce94434 5992400
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Wed Nov 27 14:46:39 2024 -0500
+
+    Merge pull request #7 from TomRiH/features/municipio
+    
+    class municipio
+
+[33mcommit 599240002bd7d6730f9863ded780494141790379[m[33m ([m[1;31morigin/features/municipio[m[33m)[m
+Author: Jefferson <jeffer230@gmail.com>
+Date:   Wed Nov 27 14:45:48 2024 -0500
+
+    class municipio
+
+[33mcommit 311256a3ef48cc6e3d0d769b1d3fecd6b5b367d7[m
+Author: tomas <tomas.riosh@hotmail.com>
+Date:   Tue Nov 26 21:56:12 2024 -0500
+
+    1. Creacion de clase Evento con su respectivo Controlador, Respositorio y Servicio 2. Un cambio minimo a la ortogarfia en la clase DepartamentoService
+
+[33mcommit feea759d373d7c05f51edaa810fe96bb5b316c32[m
+Merge: c7a6399 ce94434
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Tue Nov 26 19:54:52 2024 -0500
+
+    Merge pull request #6 from TomRiH/master
+    
+    Master
+
+[33mcommit ce944343fa2c70afff3fc8ec82ee96874c6ff3b7[m
+Merge: b86ea23 d2797fa
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Tue Nov 26 19:54:21 2024 -0500
+
+    Merge pull request #5 from TomRiH/features/rolpermisssion
+    
+    roles y permisos
+
+[33mcommit d2797fae2923a1f6c5856e196453113ed5603510[m
+Author: Jefferson <jeffer230@gmail.com>
+Date:   Tue Nov 26 19:53:37 2024 -0500
+
+    roles y permisos
+
+[33mcommit c7a6399cfb8c4d1713e7faa9033d55ac31a9bd9f[m
+Merge: 4e8d8a1 b86ea23
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Tue Nov 26 19:37:29 2024 -0500
+
+    Merge pull request #4 from TomRiH/master
+    
+    Master
+
+[33mcommit b86ea239d0118a91383b1c7d34cf300461cd7b1e[m
+Merge: 7796807 4e8d8a1
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Tue Nov 26 19:36:57 2024 -0500
+
+    Merge pull request #3 from TomRiH/features/rolpermisssion
+    
+    Merge pull request #1 from TomRiH/features/practicajpa
+
+[33mcommit 7796807f658aaca57672ea0536d23b873193948e[m
+Merge: fe896c8 740c4bd
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Mon Nov 25 18:55:16 2024 -0500
+
+    Merge pull request #2 from TomRiH/features/practicajpa
+    
+    practica 1 jpa entidades Categorias Departamentos
+
+[33mcommit 4e8d8a18c2965951430d1c322c76fa9ec00fd716[m[33m ([m[1;31morigin/NuevasEntidades[m[33m)[m
+Merge: fe896c8 740c4bd
+Author: Jefferson <44727690+jeffer230@users.noreply.github.com>
+Date:   Mon Nov 25 18:54:51 2024 -0500
+
+    Merge pull request #1 from TomRiH/features/practicajpa
+    
+    practica 1 jpa entidades Categorias Departamentos
+
+[33mcommit 740c4bd64c19adc4a2e1b2df21d676bdeb748af1[m
+Author: Jefferson <jeffer230@gmail.com>
+Date:   Sat Nov 23 00:56:06 2024 -0500
+
+    practica 1 jpa entidades Categorias Departamentos
+
+[33mcommit fe896c812c657dd3c40c3e19e522e74e55ddce1f[m
+Author: tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 21 19:54:02 2024 -0500
+
+    Primer commit
+
+[33mcommit 6ce9c9e0593a0be3de7afda9618af5cfbfe53189[m
+Author: tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 21 19:50:19 2024 -0500
+
+    Primer commit
+
+[33mcommit b5924640cece8cd0af7403988b46ae7d2266511c[m
+Author: tomas <tomas.riosh@hotmail.com>
+Date:   Thu Nov 21 19:47:32 2024 -0500
+
+    Primer commit
