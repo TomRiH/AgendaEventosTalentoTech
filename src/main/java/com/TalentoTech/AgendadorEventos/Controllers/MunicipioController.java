@@ -1,5 +1,6 @@
 package com.TalentoTech.AgendadorEventos.Controllers;
 
+import com.TalentoTech.AgendadorEventos.Dto.MunicipioDto;
 import com.TalentoTech.AgendadorEventos.Entities.Departamento;
 import com.TalentoTech.AgendadorEventos.Entities.Municipio;
 import com.TalentoTech.AgendadorEventos.Services.MunicipioService;
@@ -18,8 +19,8 @@ public class MunicipioController {
     private MunicipioService municipioService;
 
     @PostMapping
-    public ResponseEntity<Municipio> guardarMunicipio(@RequestBody Municipio municipio) {
-        Municipio municipioGuardar = municipioService.guardarMunicipio(municipio);
+    public ResponseEntity<Municipio> guardarMunicipio(@RequestBody MunicipioDto municipioDto) {
+        Municipio municipioGuardar = municipioService.guardarMunicipio(municipioDto);
         return  new ResponseEntity<>(municipioGuardar, HttpStatus.CREATED);
     }
 
@@ -43,10 +44,9 @@ public class MunicipioController {
     }
 
 
-
     @PutMapping("/{id}")
-    public ResponseEntity<Municipio> editarMunicipio(@PathVariable Integer id, @RequestBody Municipio municipio) {
-        return ResponseEntity.ok(municipioService.editarMunicipio(id, municipio));
+    public ResponseEntity<Municipio> editarMunicipio(@PathVariable Integer id, @RequestBody MunicipioDto municipioDto) {
+        return ResponseEntity.ok(municipioService.editarMunicipio(id, municipioDto));
     }
 
     @DeleteMapping("/{id}")

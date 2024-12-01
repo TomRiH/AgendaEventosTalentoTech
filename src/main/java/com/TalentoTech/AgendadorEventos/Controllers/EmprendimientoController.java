@@ -1,6 +1,7 @@
 package com.TalentoTech.AgendadorEventos.Controllers;
 
 
+import com.TalentoTech.AgendadorEventos.Dto.EmprendimientoDto;
 import com.TalentoTech.AgendadorEventos.Entities.Departamento;
 import com.TalentoTech.AgendadorEventos.Entities.Emprendimiento;
 import com.TalentoTech.AgendadorEventos.Services.EmprendimientoService;
@@ -20,7 +21,7 @@ public class EmprendimientoController {
 
     //Crear
     @PostMapping
-    public ResponseEntity<Emprendimiento> crearEmprendimiento(@RequestBody Emprendimiento emprendimiento) {
+    public ResponseEntity<Emprendimiento> crearEmprendimiento(@RequestBody EmprendimientoDto emprendimiento) {
         Emprendimiento emprendimientoGuardar = emprendimientoService.guardarEmprendimiento(emprendimiento);
         return new ResponseEntity<>(emprendimientoGuardar, HttpStatus.CREATED);
     }
@@ -41,7 +42,7 @@ public class EmprendimientoController {
 
     //Editar
     @PutMapping("/{id}")
-    public ResponseEntity<Emprendimiento> editarEmprendimiento(@PathVariable Integer id, @RequestBody Emprendimiento emprendimiento){
+    public ResponseEntity<Emprendimiento> editarEmprendimiento(@PathVariable Integer id, @RequestBody EmprendimientoDto emprendimiento){
         return ResponseEntity.ok(emprendimientoService.editarEmprendimiento(id,emprendimiento));
     }
 
