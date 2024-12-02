@@ -1,6 +1,5 @@
 package com.TalentoTech.AgendadorEventos.Services;
 
-import com.TalentoTech.AgendadorEventos.Entities.Categoria;
 import com.TalentoTech.AgendadorEventos.Entities.Rol;
 import com.TalentoTech.AgendadorEventos.Repositories.RolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
