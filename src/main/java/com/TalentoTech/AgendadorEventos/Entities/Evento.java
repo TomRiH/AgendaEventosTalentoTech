@@ -26,8 +26,13 @@ public class Evento {
     @Column(nullable = false)
     private LocalDateTime fecha;
 
-    @Column(nullable = false)
-    private Integer id_municipio;
+    //@Column(nullable = false)
+    //private Integer id_municipio;
+
+    @ManyToOne(targetEntity = Municipio.class)
+    @JoinColumn(name = "id_municipio", referencedColumnName = "id", nullable = false)
+    //@JsonIgnore
+    private Municipio municipio;
 
     @Column(nullable = false, length = 255)
     private String direccion;

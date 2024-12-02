@@ -20,12 +20,12 @@ public class EventoEmprendimiento {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_evento", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     private Evento evento;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_emprendimiento", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     private Emprendimiento Emprendimiento;
 
 }

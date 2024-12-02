@@ -28,12 +28,12 @@ public class Emprendimiento {
 
     @ManyToOne(targetEntity = Municipio.class)
     @JoinColumn(name = "id_municipio", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     private Municipio municipio;
 
     @ManyToOne(targetEntity = Categoria.class)
     @JoinColumn(name = "id_categoria", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     private Categoria categoria;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
