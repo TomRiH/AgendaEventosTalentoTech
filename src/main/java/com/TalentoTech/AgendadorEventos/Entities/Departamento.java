@@ -28,7 +28,7 @@ public class Departamento {
     private String nombre;
 
     @OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore
+    @JsonIgnore // comentar si se desea traer el listado de los municipios por departamento
     private List<Municipio> municipios;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)

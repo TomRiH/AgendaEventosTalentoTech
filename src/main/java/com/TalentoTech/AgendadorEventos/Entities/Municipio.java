@@ -27,8 +27,8 @@ public class Municipio {
     private String nombre;
 
     @ManyToOne(targetEntity = Departamento.class)
-    @JoinColumn(name = "id_departamento", referencedColumnName = "codigo", nullable = false)
-    @JsonIgnore
+    @JoinColumn(name = "id_departamento", referencedColumnName = "id", nullable = false)
+    @JsonIgnore // comentar si se desea agregar la informacion del departamento por municipio
     private Departamento departamento;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
@@ -46,4 +46,5 @@ public class Municipio {
     protected void onUpdate() {
         this.fecha_modificacion = LocalDateTime.now();
     }
+
 }

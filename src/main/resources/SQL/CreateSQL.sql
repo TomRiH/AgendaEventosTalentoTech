@@ -77,7 +77,7 @@ CREATE TABLE `usuario` (
   `apellido` VARCHAR(30) NOT NULL,
   `telefono` VARCHAR(12) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
-  `contraseña` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `id_municipio` INT NOT NULL,
   `estado` TINYINT NOT NULL DEFAULT 1,
   `id_rol` INT NOT NULL,

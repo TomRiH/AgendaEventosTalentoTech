@@ -1,5 +1,6 @@
 package com.TalentoTech.AgendadorEventos.Controllers;
 
+import com.TalentoTech.AgendadorEventos.Dto.EventoDto;
 import com.TalentoTech.AgendadorEventos.Entities.Departamento;
 import com.TalentoTech.AgendadorEventos.Entities.Evento;
 import com.TalentoTech.AgendadorEventos.Services.EventoService;
@@ -13,7 +14,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/evento")
-
 public class EventoController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class EventoController {
 
     //insertar
     @PostMapping
-    public ResponseEntity<Evento> crearEvento(@RequestBody Evento evento){
+    public ResponseEntity<Evento> crearEvento(@RequestBody EventoDto evento){
         Evento eventoGuardar = eventoService.guardarEvento(evento);
         return new ResponseEntity<>(eventoGuardar, HttpStatus.CREATED);
     }
@@ -42,7 +42,7 @@ public class EventoController {
 
     //Editar
     @PutMapping("/{id}")
-    public ResponseEntity<Evento> editarEvento(@PathVariable Integer id, @RequestBody Evento evento) {
+    public ResponseEntity<Evento> editarEvento(@PathVariable Integer id, @RequestBody EventoDto evento) {
         return ResponseEntity.ok(eventoService.editarEvento(id, evento));
     }
 

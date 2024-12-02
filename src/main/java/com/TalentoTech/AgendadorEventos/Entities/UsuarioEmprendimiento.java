@@ -1,6 +1,5 @@
 package com.TalentoTech.AgendadorEventos.Entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,30 +7,25 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
-import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "rol")
+@Table(name = "usuario_emprendimiento")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Rol {
+public class UsuarioEmprendimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
-    private String nombre;
+    @ManyToOne(targetEntity = Usuario.class)
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id", nullable = false)
+    private Usuario usuario;
 
-    @ManyToMany
-    @JoinTable(
-            name = "rol_permiso",
-            joinColumns = @JoinColumn(name = "id_rol"),
-            inverseJoinColumns = @JoinColumn(name = "id_permiso")
-    )
-    @JsonIgnore
-    private Set<Permiso> permisos;
+    @ManyToOne(targetEntity = Emprendimiento.class)
+    @JoinColumn(name = "id_emprendimiento", referencedColumnName = "id", nullable = false)
+    private Emprendimiento emprendimiento;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fecha_creacion;

@@ -1,5 +1,6 @@
 package com.TalentoTech.AgendadorEventos.Controllers;
 
+import com.TalentoTech.AgendadorEventos.Dto.MunicipioDto;
 import com.TalentoTech.AgendadorEventos.Entities.Departamento;
 import com.TalentoTech.AgendadorEventos.Entities.Municipio;
 import com.TalentoTech.AgendadorEventos.Services.MunicipioService;
@@ -9,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("municipios")
@@ -17,14 +19,15 @@ public class MunicipioController {
     private MunicipioService municipioService;
 
     @PostMapping
-    public ResponseEntity<Municipio> guardarMunicipio(@RequestBody Municipio municipio) {
-        return ResponseEntity.ok(municipioService.guardarMunicipio(municipio));
+    public ResponseEntity<Municipio> guardarMunicipio(@RequestBody MunicipioDto municipioDto) {
+        Municipio municipioGuardar = municipioService.guardarMunicipio(municipioDto);
+        return  new ResponseEntity<>(municipioGuardar, HttpStatus.CREATED);
     }
 
-    @GetMapping("/departamento/{codigo}")
-    public  ResponseEntity<List<Municipio>> buscarByCode(@PathVariable Integer codigo){
-        List<Municipio> municipios = municipioService.findByDepartamentoId(codigo);
-        return  new ResponseEntity<>(municipios, HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity<List<Municipio>> obtenerTodos(){
+        List<Municipio> municipio = municipioService.consultarTodos();
+        return  new ResponseEntity<>(municipio, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -34,9 +37,16 @@ public class MunicipioController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/departamento/{departamentoId}")
+    public ResponseEntity<List<Municipio>> buscarByDepartamentoId(@PathVariable Integer departamentoId){
+        List<Municipio> municipios = municipioService.findByDepartamentoId(departamentoId);
+        return  new ResponseEntity<>(municipios, HttpStatus.OK);
+    }
+
+
     @PutMapping("/{id}")
-    public ResponseEntity<Municipio> editarMunicipio(@PathVariable Integer id, @RequestBody Municipio municipio) {
-        return ResponseEntity.ok(municipioService.editarMunicipio(id, municipio));
+    public ResponseEntity<Municipio> editarMunicipio(@PathVariable Integer id, @RequestBody MunicipioDto municipioDto) {
+        return ResponseEntity.ok(municipioService.editarMunicipio(id, municipioDto));
     }
 
     @DeleteMapping("/{id}")

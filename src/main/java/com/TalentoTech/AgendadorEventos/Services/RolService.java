@@ -1,6 +1,5 @@
 package com.TalentoTech.AgendadorEventos.Services;
 
-import com.TalentoTech.AgendadorEventos.Entities.Categoria;
 import com.TalentoTech.AgendadorEventos.Entities.Rol;
 import com.TalentoTech.AgendadorEventos.Repositories.RolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +21,11 @@ public class RolService {
     //Consultar x id
     public Optional<Rol> buscarById(Integer id) {
         return rolRepository.findById(id);
+    }
+
+    //Consultar permisos por rol
+    public List<Object> buscarPermisosByRol(Integer rolId) {
+        return rolRepository.findPermisosByRolId(rolId);
     }
 
     //consultar Todos

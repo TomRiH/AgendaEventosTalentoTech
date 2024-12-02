@@ -9,23 +9,23 @@ import lombok.ToString;
 
 @Data
 @Entity
-@Table(name = "rol_permiso")
+@Table(name="evento_emprendimiento")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class RolPermiso {
+public class EventoEmprendimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_rol", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
-    private Rol rol;
+    @JoinColumn(name = "id_evento", referencedColumnName = "id", nullable = false)
+    //@JsonIgnore
+    private Evento evento;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_permiso", referencedColumnName = "id", nullable = false)
-    @JsonIgnore
-    private Permiso permiso;
-  
+    @JoinColumn(name = "id_emprendimiento", referencedColumnName = "id", nullable = false)
+    //@JsonIgnore
+    private Emprendimiento Emprendimiento;
+
 }

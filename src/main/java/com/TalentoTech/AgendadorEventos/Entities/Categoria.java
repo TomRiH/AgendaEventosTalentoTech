@@ -1,10 +1,13 @@
 package com.TalentoTech.AgendadorEventos.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -22,4 +25,9 @@ public class Categoria {
 
     @Column(length = 255)
     private String descripcion;
+
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Emprendimiento> emprendimientos;
+
 }
