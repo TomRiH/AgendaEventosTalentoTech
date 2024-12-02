@@ -10,32 +10,22 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "evento")
+@Table(name = "usuario_emprendimiento")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Evento {
-
+public class UsuarioEmprendimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 255)
-    private String nombre;
+    @ManyToOne(targetEntity = Usuario.class)
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id", nullable = false)
+    private Usuario usuario;
 
-    @Column(nullable = false)
-    private LocalDateTime fecha;
-
-    @ManyToOne(targetEntity = Municipio.class)
-    @JoinColumn(name = "id_municipio", referencedColumnName = "id", nullable = false)
-    //@JsonIgnore
-    private Municipio municipio;
-
-    @Column(nullable = false, length = 255)
-    private String direccion;
-
-    @Column(nullable = false)
-    private String descripcion;
+    @ManyToOne(targetEntity = Emprendimiento.class)
+    @JoinColumn(name = "id_emprendimiento", referencedColumnName = "id", nullable = false)
+    private Emprendimiento emprendimiento;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fecha_creacion;

@@ -40,7 +40,7 @@ INSERT INTO proyecto_eventos.municipio (`codigo`, `nombre`, `id_departamento`) V
 ('MUN-005', 'Cartagena', 5);
 
 -- Insert data into `usuario`
-INSERT INTO proyecto_eventos.usuario (`cedula`, `nombre`, `apellido`, `telefono`, `email`, `contraseña`, `id_municipio`, `id_rol`) VALUES
+INSERT INTO proyecto_eventos.usuario (`cedula`, `nombre`, `apellido`, `telefono`, `email`, `password`, `id_municipio`, `id_rol`) VALUES
 ('1234567890', 'Juan', 'Pérez', '3001234567', 'juan.perez@example.com', 'password123', 1, 1),
 ('2345678901', 'María', 'Gómez', '3012345678', 'maria.gomez@example.com', 'password123', 2, 2),
 ('3456789012', 'Carlos', 'López', '3023456789', 'carlos.lopez@example.com', 'password123', 3, 3),
