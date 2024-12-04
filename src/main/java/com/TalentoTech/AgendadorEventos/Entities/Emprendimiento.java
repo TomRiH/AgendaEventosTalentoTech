@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -35,6 +36,10 @@ public class Emprendimiento {
     @JoinColumn(name = "id_categoria", referencedColumnName = "id", nullable = false)
     //@JsonIgnore
     private Categoria categoria;
+
+    @OneToMany(mappedBy = "Emprendimiento", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore // Evita ciclos infinitos al serializar
+    private List<EventoEmprendimiento> eventoEmprendimientos;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fecha_creacion;

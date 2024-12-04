@@ -53,4 +53,15 @@ public class EmprendimientoController {
         return ResponseEntity.noContent().build();
     }
 
+    // Obtener todos los emprendimientos
+    @GetMapping("/todos")
+    public List<EmprendimientoDto> obtenerTodosLosEmprendimientos() {
+        return emprendimientoService.obtenerTodosLosEmprendimientos();
+    }
+
+    @GetMapping("/id/{id}")
+    public EmprendimientoDto obtenerEmprendimiento(@PathVariable Integer id) {
+        return emprendimientoService.obtenerEmprendimientoConRelaciones(id);
+    }
+
 }
